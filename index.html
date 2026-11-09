@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dawncrest</title>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- SEO + Site name -->
+<meta name="description" content="Dawncrest routes warm B2B introductions based on real-time market signals. Selective mandates across capital, growth, and strategic introductions.">
+<link rel="canonical" href="https://dawncrestdigital.co.uk/">
+
+<!-- Open Graph (LinkedIn, Facebook, WhatsApp previews) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dawncrest">
+<meta property="og:title" content="Dawncrest">
+<meta property="og:description" content="Jibraeel routes capital, talent, and dealflow between operators who need to find each other.">
+<meta property="og:url" content="https://dawncrestdigital.co.uk/">
+<meta property="og:image" content="https://dawncrestdigital.co.uk/favicon.png">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dawncrest">
+<meta name="twitter:description" content="Jibraeel routes capital, talent, and dealflow between operators who need to find each other.">
+
+<!-- Tells Google the site name -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dawncrest",
+  "alternateName": "Dawncrest Digital",
+  "url": "https://dawncrestdigital.co.uk/"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2ea;
+    --ink: #1a1612;
+    --muted: #6b645a;
+    --accent: #8b2520;
+    --rule: #c9c1b0;
+    --rule-soft: #d9d2c2;
+    --serif: 'Playfair Display', 'EB Garamond', Georgia, serif;
+    --body: 'EB Garamond', Georgia, serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: 28px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  .masthead .brand {
+    color: var(--ink);
+  }
+
+  .masthead .right {
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* Page wrap */
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 96px 32px 80px;
+  }
+
+  /* Eyebrow above headline */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  /* Hero headline */
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+
+  .hero-sub {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--muted);
+    margin-bottom: 56px;
+    max-width: 640px;
+  }
+
+  /* Sectors row */
+  .sectors {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 24px 0;
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+    margin-bottom: 40px;
+  }
+
+  .sectors span {
+    margin: 0 4px;
+  }
+
+  /* CTAs */
+  .ctas {
+    display: flex;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 13px;
+    margin-bottom: 72px;
+    align-items: center;
+  }
+
+  .ctas a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .ctas a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .ctas .dot {
+    color: var(--muted);
+  }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    padding: 40px 0 56px;
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .stat .num {
+    font-family: var(--serif);
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  .stat .num .unit {
+    font-family: var(--body);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--muted);
+    margin-left: 4px;
+  }
+
+  .stat .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  .stats-spacer {
+    height: 24px;
+    border-top: 1px solid var(--rule-soft);
+    margin-top: 24px;
+  }
+
+  /* Section heading (small red label) */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 64px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  /* Three-pillar block (Signal Detection / Precision Routing / Selective Access) */
+  .pillars-headline {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .pillars-sub {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .pillar {
+    padding: 32px 24px 32px 0;
+    border-right: 1px solid var(--rule-soft);
+  }
+
+  .pillar:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .pillar:not(:first-child) {
+    padding-left: 24px;
+  }
+
+  .pillar .pillar-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .pillar h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+
+  .pillar p {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* Three steps */
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .step .step-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .step h4 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-family: var(--body);
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* Flow indicator */
+  .flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .flow .step-tag {
+    padding: 6px 12px;
+    border: 1px solid var(--rule);
+    background: transparent;
+  }
+
+  .flow .step-tag.active {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .flow .arrow {
+    color: var(--rule);
+  }
+
+  /* Comparison table */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 32px;
+  }
+
+  .compare .col {
+    padding: 0;
+  }
+
+  .compare .col.right {
+    border-left: 1px solid var(--rule-soft);
+  }
+
+  .compare .col-header {
+    padding: 20px 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--rule);
+    color: var(--muted);
+  }
+
+  .compare .col.right .col-header {
+    color: var(--accent);
+  }
+
+  .compare .compare-row {
+    padding: 18px 24px;
+    font-family: var(--body);
+    font-size: 17px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .compare .col.left .compare-row {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .compare .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  .section-label .date {
+    color: var(--muted);
+  }
+
+  /* Signal / work list */
+  .list {
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .list .row {
+    display: flex;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    gap: 24px;
+  }
+
+  .list .row .idx {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    width: 32px;
+    flex-shrink: 0;
+  }
+
+  .list .row .title {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink);
+    flex: 1;
+  }
+
+  .list .row .meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Recent work list (no italics, no numbers) */
+  .work .row .title {
+    font-family: var(--serif);
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  /* Note line */
+  .note {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--muted);
+    margin-top: 32px;
+  }
+
+  .updated {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 16px;
+  }
+
+  .updated a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .updated a:hover {
+    text-decoration: underline;
+  }
+
+  /* Research issues */
+  .research-list .row {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: baseline;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .research-list .row .issue {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .research-list .row .issue-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--ink);
+  }
+
+  .research-list .row.coming .issue-title {
+    color: var(--muted);
+  }
+
+  .research-list .row .when {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .coming-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding-top: 32px;
+    padding-bottom: 8px;
+  }
+
+  /* Closing block */
+  .closing {
+    margin-top: 80px;
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 40px;
+  }
+
+  .closing .lead {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .closing .book {
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  .closing .book a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+
+  .contact {
+    margin-top: 48px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .contact a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .masthead { padding: 20px 24px; font-size: 12px; flex-direction: column; gap: 8px; align-items: flex-start; }
+    .wrap { padding: 56px 24px 60px; }
+    h1 { font-size: 36px; }
+    .hero-sub { font-size: 17px; }
+    .stats { grid-template-columns: 1fr; gap: 32px; }
+    .ctas { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .ctas .dot { display: none; }
+    .research-list .row { grid-template-columns: 60px 1fr; }
+    .research-list .row .when { grid-column: 2; }
+    .footer { flex-direction: column; gap: 8px; }
+    .list .row { flex-wrap: wrap; }
+    .pillars { grid-template-columns: 1fr; }
+    .pillar { border-right: none; border-bottom: 1px solid var(--rule-soft); padding: 24px 0; }
+    .pillar:not(:first-child) { padding-left: 0; }
+    .pillar:last-child { border-bottom: none; }
+    .pillars-headline { font-size: 26px; }
+    .steps { grid-template-columns: 1fr; gap: 28px; }
+    .compare { grid-template-columns: 1fr; }
+    .compare .col.right { border-left: none; border-top: 1px solid var(--rule); }
+    .flow { flex-wrap: wrap; gap: 6px; }
+    .flow .step-tag { padding: 4px 8px; font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">Dawncrest</div>
+  <div class="right">Jibraeel &nbsp;—&nbsp; Research &amp; Introductions</div>
+</header>
+
+<main class="wrap">
+
+  <div class="eyebrow">Selective B2B introductions · Active across 7 sectors</div>
+
+  <h1>Jibraeel routes capital, talent, and dealflow between operators who need to find each other.</h1>
+
+  <p class="hero-sub">Selective mandates across capital, growth, and strategic introductions.</p>
+
+  <div class="sectors">
+    Private Equity <span>·</span> Wealth <span>·</span> Banking <span>·</span> AI <span>·</span> Healthcare <span>·</span> Recruitment <span>·</span> OSHA
+  </div>
+
+  <div class="ctas">
+    <a href="memo.html">Read memorandum →</a>
+    <span class="dot">·</span>
+    <a href="https://cal.com/jibraeel-m/connector-alignment-call-15min" target="_blank" rel="noopener">Request access →</a>
+  </div>
+
+  <div class="section-label">
+    <span>The Infrastructure</span>
+  </div>
+
+  <h2 class="pillars-headline">We don't sell. We route.</h2>
+  <p class="pillars-sub">Dawncrest sits between demand and supply. We read market signals, identify timing windows, and connect the right people before the noise does.</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01 · Signal</div>
+      <h3>Signal Detection</h3>
+      <p>Funding rounds. Key hires. Regulatory citations. Expansion moves. Every connection starts with a verified signal, not a guess.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02 · Routing</div>
+      <h3>Precision Routing</h3>
+      <p>Introductions are timed and deliberate. We control the flow so both sides arrive ready. No volume games.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03 · Access</div>
+      <h3>Selective Access</h3>
+      <p>Access is the product. You pay for proximity to the network and the timing of each introduction — not for promises or volume.</p>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <span>How It Works</span>
+  </div>
+
+  <h2 class="pillars-headline">Three steps. No complexity.</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-label">Step 01</div>
+      <h4>We identify the signal</h4>
+      <p>A funding round closes. A VP of Engineering is hired. A company posts five roles in a week. We see it before the market does.</p>
+    </div>
+    <div class="step">
+      <div class="step-label">Step 02</div>
+      <h4>We route the introduction</h4>
+      <p>Both sides are briefed. Context is set. The introduction lands warm, with timing and relevance already built in.</p>
+    </div>
+    <div class="step">
+      <div class="step-label">Step 03</div>
+      <h4>You take the conversation</h4>
+      <p>We step back. The relationship is yours. We don't sit in on calls, chase follow-ups, or insert ourselves where we don't belong.</p>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div class="step-tag">Signal</div>
+    <span class="arrow">→</span>
+    <div class="step-tag active">Routing</div>
+    <span class="arrow">→</span>
+    <div class="step-tag">Connection</div>
+  </div>
+
+  <div class="section-label">
+    <span>A Different Model</span>
+  </div>
+
+  <h2 class="pillars-headline">Most B2B motion is built backwards.</h2>
+
+  <div class="compare">
+    <div class="col left">
+      <div class="col-header">The Old Way</div>
+      <div class="compare-row">Search for prospects</div>
+      <div class="compare-row">Run campaigns</div>
+      <div class="compare-row">Pay per contact</div>
+      <div class="compare-row">Chase conversations</div>
+      <div class="compare-row">Hope timing is right</div>
+    </div>
+    <div class="col right">
+      <div class="col-header">Dawncrest</div>
+      <div class="compare-row">Signals route to you</div>
+      <div class="compare-row">Introductions flow on timing</div>
+      <div class="compare-row">Pay for access</div>
+      <div class="compare-row">Conversations come to you</div>
+      <div class="compare-row">Timing is the product</div>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <span>Current Signals</span>
+    <span class="date">May 2026</span>
+  </div>
+
+  <div class="list signals">
+    <div class="row">
+      <div class="idx">3</div>
+      <div class="title">UK wealth firms hiring succession advisors</div>
+    </div>
+    <div class="row">
+      <div class="idx">2</div>
+      <div class="title">AI companies expanding enterprise sales</div>
+    </div>
+    <div class="row">
+      <div class="idx">1</div>
+      <div class="title">Midwest bank increasing SBA appetite</div>
+    </div>
+    <div class="row">
+      <div class="idx">4</div>
+      <div class="title">FDA remediation windows opened this week</div>
+    </div>
+  </div>
+
+  <p class="note">Sourced from SEC EDGAR, FDA warning letters, IPO calendar, and proprietary B2B signal feeds.</p>
+  <p class="updated">Updated 14 May 2026 · <a href="mailto:jibraeel@dawncrestdigital.co.uk">jibraeel@dawncrestdigital.co.uk</a> if any of these are yours</p>
+
+  <div class="section-label">
+    <span>Research</span>
+  </div>
+
+  <div class="research-list">
+    <div class="row coming">
+      <div class="issue">Issue 01</div>
+      <div class="issue-title">Timing as Product</div>
+      <div class="when">soon</div>
+    </div>
+    <div class="coming-label">Coming</div>
+    <div class="row coming">
+      <div class="issue">Issue 02</div>
+      <div class="issue-title">Reading Regulatory Signals</div>
+      <div class="when">soon</div>
+    </div>
+    <div class="row coming">
+      <div class="issue">Issue 03</div>
+      <div class="issue-title">Why Connectors Outprice Vendors</div>
+      <div class="when">soon</div>
+    </div>
+    <div class="row coming">
+      <div class="issue">Issue 04</div>
+      <div class="issue-title">Thin Markets and High-Leverage Introductions</div>
+      <div class="when">soon</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p class="lead">Currently accepting 2 new counterparties this quarter.</p>
+    <p class="book"><a href="https://cal.com/jibraeel-m/connector-alignment-call-15min" target="_blank" rel="noopener">Request access →</a></p>
+  </div>
+
+  <div class="contact">
+    <a href="mailto:jibraeel@dawncrestdigital.co.uk">jibraeel@dawncrestdigital.co.uk</a><br>
+    <a href="https://linkedin.com/in/jibraeel-m" target="_blank" rel="noopener">linkedin.com/in/jibraeel-m</a>
+  </div>
+
+  <div class="footer">
+    <div>Dawncrest · Jibraeel &nbsp;&nbsp; Remote</div>
+    <div>© 2026</div>
+  </div>
+
+</main>
+
+</body>
+</html>

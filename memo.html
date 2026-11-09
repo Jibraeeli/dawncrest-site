@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dawncrest — Memorandum 01</title>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- SEO + Site name -->
+<meta name="description" content="On Strategic Introductions — a note on the levers that move companies, and the work of using them well.">
+<link rel="canonical" href="https://dawncrestdigital.co.uk/memo.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dawncrest">
+<meta property="og:title" content="On Strategic Introductions — Dawncrest Memorandum 01">
+<meta property="og:description" content="A note on the levers that move companies, and the work of using them well.">
+<meta property="og:url" content="https://dawncrestdigital.co.uk/memo.html">
+<meta property="og:image" content="https://dawncrestdigital.co.uk/favicon.png">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="On Strategic Introductions">
+<meta name="twitter:description" content="A note on the levers that move companies.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dawncrest",
+  "alternateName": "Dawncrest Digital",
+  "url": "https://dawncrestdigital.co.uk/"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2ea;
+    --ink: #1a1612;
+    --muted: #6b645a;
+    --accent: #8b2520;
+    --rule: #c9c1b0;
+    --rule-soft: #d9d2c2;
+    --serif: 'Playfair Display', 'EB Garamond', Georgia, serif;
+    --body: 'EB Garamond', Georgia, serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 19px;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  .masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: 28px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  .masthead .brand { color: var(--ink); }
+
+  .masthead .right {
+    color: var(--muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 32px 80px;
+  }
+
+  /* Letter header */
+  .letter-header {
+    border-top: 2px solid var(--ink);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 56px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .letter-header .row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+
+  .letter-header .label {
+    color: var(--muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-top: 4px;
+  }
+
+  .letter-header .value {
+    color: var(--ink);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* Title */
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted);
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule-soft);
+    margin-bottom: 40px;
+  }
+
+  /* Body */
+  .body p {
+    margin-bottom: 22px;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  .body em {
+    font-style: italic;
+  }
+
+  /* Footer */
+  .memo-footer {
+    margin-top: 72px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--muted);
+  }
+
+  .memo-footer .name {
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .memo-footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .memo-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .return {
+    margin-top: 32px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  .return a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+
+  .return a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  @media (max-width: 720px) {
+    .masthead { padding: 20px 24px; font-size: 12px; }
+    .wrap { padding: 48px 24px 60px; }
+    h1 { font-size: 32px; }
+    .body p { text-align: left; }
+    .letter-header .row { grid-template-columns: 80px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">Dawncrest</div>
+  <div class="right">Memorandum · 01</div>
+</header>
+
+<main class="wrap">
+
+  <div class="letter-header">
+    <div class="row">
+      <div class="label">From</div>
+      <div class="value">Jibraeel</div>
+    </div>
+    <div class="row">
+      <div class="label">Subject</div>
+      <div class="value">On Strategic Introductions</div>
+    </div>
+    <div class="row">
+      <div class="label">Filed</div>
+      <div class="value">14 May 2026</div>
+    </div>
+  </div>
+
+  <h1>On Strategic Introductions</h1>
+  <p class="subtitle">A note on the levers that move companies — and the work of using them well.</p>
+
+  <div class="body">
+    <p>There are very few levers in business that can change the direction of a company quickly.</p>
+
+    <p>There are even fewer that can be used by one person, with no office, no employees, no brand name, no large budget, and nothing but a laptop, judgment, and an internet connection.</p>
+
+    <p>Strategic introductions are one of those levers.</p>
+
+    <p>Right now, somewhere in the market, a founder is looking for capital. A lender has appetite and needs qualified borrowers. A wealth advisor wants access to the right liquidity events. A company needs talent before the hiring need becomes public. A buyer wants growth before competitors notice the move.</p>
+
+    <p>None of them are lacking intelligence. None of them are lazy. Most of them simply do not know where the right door is, or when it has quietly opened.</p>
+
+    <p>Within minutes, one message can begin a conversation between people who should have met months ago. A few days later, money can move. A role can be filled. A partnership can begin. A company can enter a different future.</p>
+
+    <p>It sounds almost too simple, but many meaningful outcomes in business begin this way.</p>
+
+    <p>If we can be honest for a moment, though, you have already heard versions of this before. You have heard about networking. You have heard about lead generation. You have heard about outreach, funnels, growth hacks, automation, and all the polished language built around getting attention.</p>
+
+    <p>So let us agree on one thing.</p>
+
+    <p><em>There is no silver bullet.</em></p>
+
+    <p>It is not easy to create trust between strangers. It is not easy to recognize timing before it becomes obvious. It is not easy to know which conversations matter and which are noise. It is not easy to earn the confidence of serious people. It is not easy to build value from access alone.</p>
+
+    <p>It is, however, possible. And when done properly, it can be one of the highest-leverage skills in modern business.</p>
+
+    <p>I learned this by sitting close to markets where one conversation can be worth more than a year of ordinary effort. I watched visible companies miss obvious opportunities. I watched unknown operators quietly win because they understood timing, trust, and access better than louder competitors.</p>
+
+    <p>That changed how I saw business.</p>
+
+    <p>Most people think growth is created through force. Often, growth is created through alignment — the right person, the right moment, the right context, introduced cleanly.</p>
+
+    <p>Dawncrest exists to work in that world. We help capital find opportunity. We help operators find counterparties. We help serious people meet while the window is still open.</p>
+
+    <p>Because in some markets, one introduction is nothing.</p>
+
+    <p>In others, one introduction can be worth millions.</p>
+  </div>
+
+  <div class="memo-footer">
+    <div class="name">Jibraeel</div>
+    <div>Dawncrest · Research &amp; Introductions</div>
+    <a href="mailto:jibraeel@dawncrestdigital.co.uk">jibraeel@dawncrestdigital.co.uk</a>
+  </div>
+
+  <div class="return">
+    <a href="index.html">← Return to desk</a>
+  </div>
+
+</main>
+
+</body>
+</html>
